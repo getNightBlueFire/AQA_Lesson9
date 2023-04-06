@@ -6,17 +6,19 @@ import java.util.Scanner;
 public class Main1 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
         int age = 0;
+        String name = scanner.nextLine();
+
+
 
         try {
             age = scanner.nextInt();
-        } catch (Exception e){
+        } catch (UserAgeException e){
 
         }
 
-        User user = new User(name, age);
-        System.out.println(user);
+//        User user = new User(name, age);
+//        System.out.println(user);
 
 
 //        try {

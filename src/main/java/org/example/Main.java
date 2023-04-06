@@ -16,17 +16,20 @@ public class Main {
 
         int a = 10;
         Random r = new Random();
-
+        int c = 0;
         for (int i = 0; i < 100; i++) {
             int b = r.nextInt(-20,20);
             try {
                 System.out.println(a / b);
 
             } catch (ArithmeticException e){
-                System.out.println("oops");
+                e.getStackTrace();
+//                System.out.println("oops");
+//                ++c;
+                throw new RuntimeException();
             }
         }
-
+        System.out.println(c + " проблем было обнаружено");
         System.out.println("asadsf");
     }
 
